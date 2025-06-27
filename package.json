@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "jsonwebtoken": "^9.0.2",
+    "motion": "^12.19.1",
+    "tailwind-scrollbar-hide": "^4.0.0"
+  }
+}
