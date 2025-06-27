@@ -44,7 +44,7 @@ const ProfilePage = () => {
           <div className="flex flex-col items-center gap-4">
             <div className="relative">
               <img
-                src={selectedImg || authUser.profilePic || ""}
+                src={selectedImg || authUser.profilePic || "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.52T8HHBWh6b0dwrG6tSpVQHaFe%26pid%3DApi&f=1&ipt=bdd5dd42c354db317aee4203f5612cf3d4f1451523a1ded10b190dca517debc2&ipo=images"}
                 alt="Profile"
                 className="size-32 rounded-full object-cover border-4 "
               />
@@ -55,7 +55,7 @@ const ProfilePage = () => {
                   bg-base-content hover:scale-105
                   p-2 rounded-full cursor-pointer 
                   transition-all duration-200
-                  ${isUpdatingProfile ? "animate-pulse pointer-events-none" : "./src/pic/profile.png"}
+                  ${isUpdatingProfile ? "animate-pulse pointer-events-none" : ""}
                 `}
               >
                 <Camera className="w-5 h-5 text-base-200" />

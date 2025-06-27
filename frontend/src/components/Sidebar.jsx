@@ -51,7 +51,7 @@ function Sidebar() {
               <img
                 src={
                   user.profilePic ||
-                  './src/pic/User-Profile.png'
+                  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.Gfp0lwE6h7139625a-r3aAHaHa%3Fr%3D0%26pid%3DApi&f=1&ipt=578a757cfee81dd3acaf8dd4360f777c84c173551375eb4e787e37b7ade54d9f&ipo=images'
                 }
                 alt={user.name}
                 className="size-12 object-cover rounded-full"
