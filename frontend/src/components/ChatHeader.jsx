@@ -13,7 +13,7 @@ const ChatHeader = () => {
           
           <div className="avatar">
             <div className="size-10 rounded-full relative">
-              <img src={selectedUser.profilePic || "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F5%2FUser-Profile-PNG-Image.png&f=1&nofb=1&ipt=4201d34c0df2b75bbe84e2358ca73e908ae572fe3bb86227ffa1fb3acd6212d5"} alt={selectedUser.name} />
+              <img src={selectedUser.profilePic || "frontend/src/pic/profile.png"} alt={selectedUser.name} />
             </div>
           </div>
 

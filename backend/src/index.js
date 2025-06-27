@@ -13,7 +13,7 @@ import { dbConnect } from "./lib/server.js";
 import { app ,server } from "./utils/sodket.js";
 
 dotenv.config();
-const PORT=process.env.PORT || 3000 ;
+const PORT=process.env.PORT || 4001 ;
 
 
 const __dirname =path.resolve();
