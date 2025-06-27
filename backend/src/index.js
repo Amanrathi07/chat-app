@@ -1,7 +1,9 @@
 import express from "express";
 import cors from "cors"
 import authRoute from "./routes/auth.route.js"
-import messageRoute from "./routes/message.route.js"
+import messageRoute from "./routes/message.route.js";
+
+import path from "path";
 
 import dotenv from "dotenv"
 
@@ -11,10 +13,10 @@ import { dbConnect } from "./lib/server.js";
 import { app ,server } from "./utils/sodket.js";
 
 dotenv.config();
-const PORT=process.env.PORT
+const PORT=process.env.PORT || 3000 ;
 
 
-
+const __dirname =path.resolve();
 
 
 app.use(cookieParser());
@@ -27,10 +29,16 @@ app.use(express.json());
 app.use("/v1/auth",authRoute);
 app.use("/v1/message",messageRoute);
 
+if(process.env.NODE_ENV==="production"){
+    app.use(express.static(path.join(__dirname,"../frontend/dist")));
 
+    app.get("*",(req,res)=>{
+        res.sendFile(path.join(__dirname,"../frontend","dist","index.html"))
+    })
+}
 
 server.listen(PORT,()=>{
-    console.log("server start at port 3000");
+    console.log("server start at port ",PORT);
     dbConnect(process.env.DB_URL);
 })
 

@@ -1,8 +1,6 @@
 {
-  "dependencies": {
-    "cookie-parser": "^1.4.7",
-    "jsonwebtoken": "^9.0.2",
-    "motion": "^12.19.1",
-    "tailwind-scrollbar-hide": "^4.0.0"
+  "scripts": {
+    "build":"npm install --prefix backend  &&  npm install --prefix frontend  &&  npm run build --prefix frontend" ,
+    "start":"npm run start --prefix backend"
   }
 }
