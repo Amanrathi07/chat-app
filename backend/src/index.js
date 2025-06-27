@@ -26,15 +26,17 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.use("/v1/auth",authRoute);
-app.use("/v1/message",messageRoute);
+app.use("/v1/auth", authRoute);
+app.use("/v1/message", messageRoute);
 
-if(process.env.NODE_ENV==="production"){
+if (process.env.NODE_ENV === "production") {
+    console.log("Serving static build...");
     app.use(express.static(path.join(__dirname,"../frontend/dist")));
 
-    app.get("*",(req,res)=>{
-        res.sendFile(path.join(__dirname,"../frontend","dist","index.html"))
-    })
+    app.get("*", (req, res) => {
+        console.log("Catch-all route hit");
+        res.sendFile(path.join(__dirname,"../frontend","dist","index.html"));
+    });
 }
 
 server.listen(PORT,()=>{
