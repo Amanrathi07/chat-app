@@ -56,7 +56,7 @@ function Navbar() {
             <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
               <img
                 alt="profile"
-                src={authUser?.profilePic || "ttps://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.52T8HHBWh6b0dwrG6tSpVQHaFe%26pid%3DApi&f=1&ipt=bdd5dd42c354db317aee4203f5612cf3d4f1451523a1ded10b190dca517debc2&ipo=images"}
+                src={authUser?.profilePic || "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.52T8HHBWh6b0dwrG6tSpVQHaFe%26pid%3DApi&f=1&ipt=bdd5dd42c354db317aee4203f5612cf3d4f1451523a1ded10b190dca517debc2&ipo=images"}
               />
             </div>
           </div>
