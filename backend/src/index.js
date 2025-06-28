@@ -24,21 +24,24 @@ app.use(
 );
 app.use(express.json());
 
-// API routes
 app.use("/v1/auth", authRoute);
 app.use("/v1/message", messageRoute);
 
-// Serve frontend in production
+
+
 if (process.env.NODE_ENV === "production") {
   const frontendPath = path.join(__dirname, "../../frontend/dist");
   console.log("Serving static build from:", frontendPath);
 
   app.use(express.static(frontendPath));
-  app.get("/", (req, res) => {
-    res.sendFile(path.join(frontendPath, "index.html"));
+
+  const routes = ["/", "/home", "/profile", "/Setting"];
+  routes.forEach(route => {
+    app.get(route, (req, res) => {
+      res.sendFile(path.join(frontendPath, "index.html"));
+    });
   });
 } else {
-  // Optional: Dev-only 404
   app.use((req, res) => {
     res.status(404).json({ message: "Route not found" });
   });
