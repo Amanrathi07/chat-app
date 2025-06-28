@@ -1,6 +1,9 @@
 {
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Full-stack chat app with React + Node.js + Socket.IO",
   "scripts": {
-    "build":"npm install --prefix backend  &&  npm install --prefix frontend  &&  npm run build --prefix frontend" ,
-    "start":"npm run start --prefix backend"
+    "build": "npm ci --prefix backend && npm ci --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
   }
 }
